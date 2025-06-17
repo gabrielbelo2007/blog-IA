@@ -8,7 +8,7 @@ url: "gabrielbelo2007.github.io" # the base hostname & protocol for your site, e
 github_username:  gabrielbelo2007
 
 sass:
-  sass_dir: assets/scss
+  sass_dir: assets/css
   style: compressed # ou expanded, nested, etc.
 
 # Build settings
