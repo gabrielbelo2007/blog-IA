@@ -1,0 +1,130 @@
+---
+---
+
+$text-color: #ff0000;
+$background-color: #f8f8f8;
+$brand-color: #007bff; // Azul vibrante
+$header-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font: Georgia, serif;
+
+// 2. Estilos globais (body, links, etc.)
+body {
+  font-family: $body-font;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 3. Estilos de cabeçalho
+.site-header {
+  background-color: $brand-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  h1 {
+    margin: 0;
+    font-family: $header-font;
+  }
+  .site-title {
+    color: white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .site-nav {
+    margin-top: 10px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0 15px;
+        a {
+          color: white;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 4. Estilos de layout principal (para envolver o conteúdo)
+.content-wrapper {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+// 5. Estilos de post (títulos, metadados, conteúdo)
+.post {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .post-header {
+    text-align: center;
+    margin-bottom: 20px;
+    .post-title {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: $brand-color;
+    }
+    .post-meta {
+      font-size: 0.9em;
+      color: #666;
+    }
+  }
+  .post-content {
+    h1, h2, h3, h4, h5, h6 {
+      color: $brand-color;
+      margin-top: 1.5em;
+      margin-bottom: 0.8em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 5px;
+    }
+    pre, code {
+      background-color: #eee;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-family: "Courier New", Courier, monospace;
+    }
+    pre {
+      overflow-x: auto;
+    }
+  }
+}
+
+// 6. Estilos de rodapé
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  color: #666;
+  font-size: 0.85em;
+}
