@@ -90,5 +90,5 @@ tags: [IA Generativa, Chatbots, Criação de Conteúdo, DALL-E]
 ---
 ```
 ---
-[Exemplo: conteúdo do post](/home/gabrielbelo/blog-IA/_posts/2025-06-16-post.md)
+[Exemplo: conteúdo do post](/_posts/2025-06-16-post.md)
 
