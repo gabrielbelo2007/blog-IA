@@ -1,20 +1,15 @@
-title: IA BLOG - UFRPE
+title: Bits & Bytes da IA
 email: gabrielbelo.dev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Esse e um blog de IA, onde serão postados artigos e tutoriais sobre Inteligência Artificial, 
   Aprendizado de Máquina e Ciência de Dados.
-baseurl: "blog-IA" # the subpath of your site, e.g. /blog
+baseurl: "/blog-IA" # the subpath of your site, e.g. /blog
 url: "gabrielbelo2007.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  gabrielbelo2007
-
-sass:
-  sass_dir: assets/css
-  style: compressed # ou expanded, nested, etc.
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-sass-converter
 
 

@@ -1,46 +1,54 @@
----
----
+:root{
+  --text-color: #000000;
+  --background-color: #f8f8f8;
+  --brand-color: #283b42;
+  --header-font: "Ubuntu", Ubuntu, Arial, sans-serif;
+  --body-font: Georgia, serif;
+}
 
-$text-color: #000000;
-$background-color: #f8f8f8;
-$brand-color: #0d2742; // Azul vibrante
-$header-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$body-font: Georgia, serif;
-
-// 2. Estilos globais (body, links, etc.)
 body {
-  font-family: $body-font;
+  font-family: var(--body-font);
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: $background-color;
-  color: $text-color;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 a {
-  color: $brand-color;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+  color: var(--text-color);
+  opacity: 0.7;
 }
 
-// 3. Estilos de cabeçalho
+a:hoover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
 .site-header {
-  background-color: $brand-color;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background-color: var(--brand-color);
+  color: rgb(0, 0, 0);
+  border-bottom:#0e0e0e 0.8px solid; 
+  padding: 15px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   h1 {
     margin: 0;
-    font-family: $header-font;
+    font-family: var(--header-font);
+    align-items: center;
   }
+
+  a{
+    text-decoration: none;
+  }
+
   .site-title {
-    color: white;
-    &:hover {
-      text-decoration: none;
-    }
+    color: rgb(255, 255, 255);
+    opacity: 0.8;
   }
+
   .site-nav {
     margin-top: 10px;
     ul {
@@ -52,7 +60,7 @@ a {
       li {
         margin: 0 15px;
         a {
-          color: white;
+          color: rgb(255, 255, 255);
           font-weight: bold;
           &:hover {
             text-decoration: underline;
@@ -61,16 +69,15 @@ a {
       }
     }
   }
+
 }
 
-// 4. Estilos de layout principal (para envolver o conteúdo)
 .content-wrapper {
   max-width: 800px;
   margin: 20px auto;
   padding: 0 20px;
 }
 
-// 5. Estilos de post (títulos, metadados, conteúdo)
 .post {
   background-color: white;
   padding: 30px;
@@ -84,16 +91,21 @@ a {
     .post-title {
       font-size: 2.5em;
       margin-bottom: 10px;
-      color: $brand-color;
+      color: var(--brand-color);
+    }
+    .post-subtitle {
+      font-size: 1.2em;
+      color: #555;
     }
     .post-meta {
       font-size: 0.9em;
       color: #666;
     }
   }
+
   .post-content {
     h1, h2, h3, h4, h5, h6 {
-      color: $brand-color;
+      color: var(--brand-color);
       margin-top: 1.5em;
       margin-bottom: 0.8em;
     }
@@ -119,7 +131,6 @@ a {
   }
 }
 
-// 6. Estilos de rodapé
 .site-footer {
   text-align: center;
   padding: 20px;
@@ -127,4 +138,8 @@ a {
   border-top: 1px solid #ddd;
   color: #666;
   font-size: 0.85em;
+
+  h1 {
+    font-size: 1em;
+  }
 }
