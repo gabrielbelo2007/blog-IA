@@ -44,6 +44,12 @@ github_username:  gabrielbelo2007
 # Processador de .md para HTML
 markdown:  kramdown
 
+# Syntax Higlight nos blocos de código
+
+highlighter: rouge
+kramdown:
+  input: GFM 
+
 # Listas de plugins do Jkelly
 plugins:
 - jekyll-sass-converter
@@ -61,19 +67,28 @@ plugins:
 	- default.html
 	- post.html
 	- 404.html
+  - category_page.html
 
-- assets (Estilização das páginas)
-	- style.css
+- assets (Estilização das páginas e Imagens dos posts)
+  - css
+	  - style.css
+    - syntax.css
+  - img 
+    - api-gemini.png
 
 > Precisam seguir uma convenção de nomenclatura:  ANO-MÊS-DIA-titulo-do-post
 - _posts (Pasta especial que armazena as postagens)
 	- 2025-06-16-post.md 
 	
-- pages (Armazena as paginas principais do site)
+- pages (Armazena as páginas principais do site)
 	- index.md
 	- about.md
 	- posts.md
 	- 404.md
+
+- category (Armazena as páginas com os posts de cada categoria)
+  - deep-learning.md
+  - inteligencia-artifical.md
 
 ### Estrutura dos Posts
 
@@ -81,6 +96,8 @@ plugins:
 ```yaml
 ---
 layout:  post
+image: assets/img/api-gemini.png
+image_caption: Uma imagem descritiva do Gemini AI
 title:  Utilizando a API do Google Gemini
 subtitle:  Use o Modelo de IA do Google em Python
 date:  2024-09-10 14:30:00 -0300

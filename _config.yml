@@ -9,6 +9,9 @@ github_username:  gabrielbelo2007
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM 
 plugins:
   - jekyll-feed
 
