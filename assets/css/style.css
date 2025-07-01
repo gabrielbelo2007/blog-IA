@@ -3,7 +3,7 @@
   --background-color: #f8f8f8;
   --brand-color: #283b42;
   --header-font: "Ubuntu", Ubuntu, Arial, sans-serif;
-  --body-font: "Times New Roman", Lora, serif;
+  --body-font: "Work Sans", sans-serif;
 }
 
 body {
@@ -23,6 +23,14 @@ a {
 a:hoover{
   text-decoration: underline;
   opacity: 1;
+}
+
+h2 {
+  font-family: var(--header-font);
+  color: var(--brand-color);
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  font-size: 2.5em;
 }
 
 .site-header {
@@ -73,32 +81,38 @@ a:hoover{
 }
 
 .content-wrapper {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 0 20px;
 }
 
 .post {
+  max-width: 900px;
   background-color: white;
   padding: 30px;
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
 
   .post-header {
     text-align: center;
     margin-bottom: 20px;
     .post-title {
       font-size: 2.5em;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       color: var(--brand-color);
     }
     .post-subtitle {
       font-size: 1.2em;
       color: #555;
+      margin: 5px;
     }
     .post-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       font-size: 0.9em;
       color: #666;
     }
@@ -107,8 +121,11 @@ a:hoover{
   .post-content {
     h1, h2, h3, h4, h5, h6 {
       color: var(--brand-color);
-      margin-top: 1.5em;
-      margin-bottom: 0.8em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    h2{
+      font-size: 1.4em;
     }
     p {
       margin-bottom: 1em;
@@ -145,8 +162,47 @@ a:hoover{
   }
 }
 
+.container_latest{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.posts_latest, .posts {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: left;
+  overflow: hidden;
+  min-width: 250px;
+}
+
+.posts {
+  align-items: center;
+  justify-content: center;
+}
+
+.posts img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
 .post-image {
   width: 70%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.posts_order img {
+  width: 80%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 5px;
@@ -154,23 +210,57 @@ a:hoover{
 
 .posts_latest img {
   display: flex;
-  width: 40%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 5px;
 }
 
-.posts_latest a {
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: var(--text-color);
-  opacity: 0.8;
+.posts_latest p, .posts p, .posts_order p {
+  font-size: 1em;
+  color: #333;
+  text-align: left;
+  margin-top: 2px;
+  margin-bottom: 20px;
 }
 
-.posts_latest a:hover {
+.posts_latest a, .posts a, .posts_order a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.posts_latest a:hover, .posts a:hover, .posts_order a:hover {
   text-decoration: underline;
   opacity: 1;
+}
+
+.posts_latest h3, .posts h3, .posts_order h3 {
+  font-size: 1.2em;
+  color: var(--brand-color);
+  font-weight: bold;
+  opacity: 0.8; 
+  margin: 2px;
+}
+
+.container_posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.posts_order h3 {
+  font-size: 0.8em;
+}
+
+.posts_order a {
+  font-size: 1em;
+}
+
+.posts_order p {
+  font-size: 0.7em;
 }
 
 .post-image-caption {

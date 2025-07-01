@@ -4,20 +4,21 @@ layout: default
 
 <article class="post">
   <header class="post-header">
-    {% if page.image %}
-      <img src="{{ site.baseurl}}/{{ page.image }}" alt="{{ page.title }}" class="post-image">
-      <p class="post-image-caption">{{ page.image_caption | default: "" }}</p>
+    {% if page.categories %}
+      {% for category in page.categories %}<a href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
     {% endif %}
+
     <h1 class="post-title">{{ page.title | escape }}</h1>
     <h2 class="post-subtitle">{{ page.subtitle | default: "" }}</h2>
     <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      {% if page.author %}
-        por {{ page.author }}
-      {% endif %}
-      {% if page.categories %}
-        em {% for category in page.categories %}<a href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
-      {% endif %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    {% if page.author %}
+      por {{ page.author }}
+    {% endif %}
+
+    <img src="{{ site.baseurl}}/{{ page.image }}" alt="{{ page.title }}" class="post-image">
+    <p class="post-image-caption">{{ page.image_caption | default: "" }}</p>
+
     </p>
   </header>
 
