@@ -181,6 +181,10 @@ h2 {
   min-width: 250px;
 }
 
+.posts_order{
+  padding: 15px
+}
+
 .posts {
   align-items: center;
   justify-content: center;
