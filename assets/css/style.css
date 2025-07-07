@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Seu restante do CSS aqui */
+
 :root{
   --text-color: #000000;
   --background-color: #f8f8f8;
-  --brand-color: #283b42;
+  --brand-color: #363b96;
   --header-font: "Ubuntu", Ubuntu, Arial, sans-serif;
   --body-font: "Work Sans", sans-serif;
 }
@@ -11,7 +15,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: white;
   color: var(--text-color);
 }
 
@@ -36,7 +40,7 @@ h2 {
 .site-header {
   background-color: var(--brand-color);
   color: rgb(0, 0, 0);
-  border-bottom:#0e0e0e 0.8px solid; 
+  border-bottom:#0e0e0e 0.6px hidden; 
   padding: 15px;  
   display: flex;
   justify-content: center;
@@ -52,9 +56,13 @@ h2 {
     text-decoration: none;
   }
 
+  a:hover {
+    opacity: 1;
+  }
+
   .site-title {
     color: rgb(255, 255, 255);
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .site-nav {
@@ -81,9 +89,12 @@ h2 {
 }
 
 .content-wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: 1000px;
   margin: 20px auto;
   padding: 0 20px;
+  align-items: center;
 }
 
 .post {
@@ -127,7 +138,8 @@ h2 {
       font-size: 1.4em;
     }
     p {
-      margin-bottom: 1em;
+      justify-content: justify;
+      margin-bottom: 1.1em;
       font-size: 18px;
     }
     img {
@@ -138,9 +150,10 @@ h2 {
       border-radius: 5px;
     }
     pre, code {
-      background-color: #eee;
-      padding: 5px 10px;
-      border-radius: 4px;
+      color: white;
+      background-color: #24292E;
+      padding: 5px;
+      border-radius: 10px;
       font-family: "Courier New", Courier, monospace;
     }
     pre {
@@ -160,13 +173,24 @@ h2 {
   h1 {
     font-size: 1em;
   }
+
+  a { 
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
 }
 
 .container_latest{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 15px;
   justify-content: center;
 }
 
@@ -252,7 +276,18 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 15px;
+  align-content: center;
+}
+
+.posts_order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .posts_order h3 {
@@ -282,3 +317,6 @@ blockquote {
   padding: 5px; 
 }
 
+.sobre {
+  text-decoration: none;
+}
