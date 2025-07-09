@@ -145,11 +145,10 @@ h2 {
       font-size: 1em; /* Ajuste para mobile */
     }
     img {
-      max-width: 95%; /* Ajuste para não transbordar */
+      max-width: 70%; /* Ajuste para não transbordar */
       height: auto;
       display: block;
       margin: 15px auto; /* Margem menor */
-      border-radius: 5px;
     }
     pre, code {
       color: white;
@@ -220,6 +219,7 @@ h2 {
 }
 
 .post-image {
+  padding: 5px; /* Padding menor */
   width: 90%; /* Ajuste para mobile */
 }
 
@@ -270,7 +270,6 @@ h2 {
   font-size: 0.8em; /* Ajuste para mobile */
   color: #888;
   text-align: center;
-  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -281,6 +280,28 @@ blockquote {
   padding: 10px; /* Padding menor */
   font-size: 0.95em; /* Ajuste para mobile */
 }
+
+.post-list {
+  display: flex;
+  flex-direction: column; /* Empilha posts verticalmente */
+  align-items: center; /* Centraliza os posts */
+  gap: 5px; /* Espaçamento entre os posts */
+}
+
+.post-list div {
+  padding: 5px; /* Padding menor */
+  width: 100%; /* Ocupa a largura total */
+  max-width: 700px; /* Limita a largura máxima */
+  text-align: center; /* Centraliza o texto */
+}
+
+.post-list div h4 {
+  text-align: justify;
+  font-size: 1em; /* Ajuste para mobile */
+  font-style: normal;
+  font-weight: 450;
+}
+
 
 .sobre {
   text-decoration: none;
