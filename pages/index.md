@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bits & Bytes da IA
-permalink: /index/
+permalink: /
 ---
 
 <div class="container_latest">

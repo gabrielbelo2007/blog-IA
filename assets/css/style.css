@@ -144,6 +144,9 @@ h2 {
       margin-bottom: 24px; /* Margem menor */
       font-size: 1em; /* Ajuste para mobile */
     }
+    li {
+      margin-bottom:5px; /* Margem menor */
+    }
     img {
       max-width: 90%; /* Ajuste para não transbordar */
       height: auto;
@@ -156,11 +159,12 @@ h2 {
       border-radius: 10px;
       font-family: "Courier New", Courier, monospace;
       font-size: 0.7em; /* Ajuste para mobile */
-      white-space: pre-wrap; /* Quebra linhas longas */
-      word-wrap: break-word; /* Quebra palavras longas */
+      padding: 5px;
     }
     pre {
-      overflow-x: auto; /* Permite rolagem horizontal se necessário */
+      overflow-x: auto;
+      white-space: pre-wrap; /* Quebra linhas longas */
+      word-wrap: break-word; /* Permite rolagem horizontal se necessário */
     }
   }
 }
