@@ -147,6 +147,9 @@ h2 {
     li {
       margin-bottom:5px; /* Margem menor */
     }
+    th{
+      padding-right: 10px;
+    }
     img {
       max-width: 90%; /* Ajuste para não transbordar */
       height: auto;
