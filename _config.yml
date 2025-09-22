@@ -15,5 +15,3 @@ kramdown:
   input: GFM 
 plugins:
   - jekyll-feed
-
-
